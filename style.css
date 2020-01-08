@@ -1,0 +1,77 @@
+.wrap{
+    background: url(../bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 1000px;
+}
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    border:  1px solid transparent;
+    width: 500px;
+    height: 300px;
+    padding: 50px;
+    text-align: center;
+    background-color: #7f8fa6;
+    box-shadow: 0px 0px 3px black;
+}
+.content h1{
+    color: #fff;
+}
+.content input{
+    width: 300px;
+    padding: 5px;
+}
+
+.todoList{
+    list-style-type: none;
+}
+
+.todoLi{
+    text-align: left;
+    margin-left: 45px;
+}
+.todoLi a{
+    float: right;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 23%;
+}
+.todoLi.active{
+    text-decoration: line-through;
+}
+.todoLi .chk{
+    width: 20px;
+}
+
+.finishAll{
+    width: 80px !important;
+    font-size: 25px !important;
+    cursor: pointer;
+}
+
+.deleteAll{
+    width: 80px !important;
+    font-size: 25px !important;
+    cursor: pointer;
+}
+
+.showComplete{
+    width: 80px !important;
+    font-size: 25px !important;
+    cursor: pointer;
+}
+.showInComplete{
+    width: 80px !important;
+    font-size: 25px !important;
+    cursor: pointer;
+}
+
+.showAll{
+    width: 80px !important;
+    font-size: 25px !important;
+    cursor: pointer;
+}

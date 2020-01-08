@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="content">
+            <h1>待辦事項</h1>
+            <input type="text" placeholder="請輸入待辦事項" class="new-todo" v-model="newTodo" @keyup.enter="addTodo(newTodo)">
+            <ul class="todoList">
+                <li v-for="todo in todos" class="todoLi" v-bind:class="{active: todo.completed}" v-if=todo.show==true key="12344">
+                    <input type="checkbox" v-model="todo.completed" class="chk">
+                    {{todo.content}}
+                    <a href="#" @click.prevent="removeTodo(todo)">刪除</a>
+                </li>
+            </ul>
+            <input type="button" value="全部完成" class="finishAll" @click.prevent="FinishAllTodo()">
+            <input type="button" value="刪除全部" class="deleteAll" @click.prevent="ClearCompleted()">
+            <input type="button" value="顯示已完成" class="showComplete" @click.prevent="ShowCompleted()">
+            <input type="button" value="顯示未完成" class="showInComplete" @click.prevent="ShowInComplete()">
+            <input type="button" value="顯示全部" class="showAll" @click.prevent="ShowAll()">
+        </div>
+        {{todos}}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script src="all.js"></script>
+</body>
+
+</html>
